@@ -1,0 +1,85 @@
+case_001: REJECT slots=6 (>5)
+case_003: sp=1.2240 posthoc=1.2145 GAIN slots=4
+case_004: REJECT slots=6 (>5)
+case_005: REJECT slots=6 (>5)
+case_006: sp=2.8887 posthoc=2.8887 GAIN slots=5
+case_007: REJECT slots=6 (>5)
+case_008: REJECT slots=6 (>5)
+case_009: REJECT slots=6 (>5)
+case_010: sp=3.4531 posthoc=2.8929 GAIN slots=4
+case_011: sp=3.9398 posthoc=3.1702 GAIN slots=4
+case_012: REJECT slots=6 (>5)
+case_013: REJECT slots=6 (>5)
+case_015: sp=3.5375 posthoc=3.4538 GAIN slots=5
+case_016: sp=1.4598 posthoc=1.0000 GAIN slots=4
+case_017: REJECT slots=6 (>5)
+case_018: REJECT slots=6 (>5)
+case_020: REJECT slots=6 (>5)
+case_021: REJECT slots=6 (>5)
+case_022: REJECT slots=6 (>5)
+case_023: REJECT slots=6 (>5)
+case_024: sp=1.4603 posthoc=1.0000 GAIN slots=4
+case_025: REJECT slots=6 (>5)
+case_026: sp=2.3607 posthoc=2.2693 GAIN slots=3
+case_027: REJECT slots=6 (>5)
+case_028: REJECT slots=6 (>5)
+case_029: REJECT slots=6 (>5)
+case_030: REJECT slots=6 (>5)
+case_031: REJECT slots=6 (>5)
+case_033: REJECT slots=6 (>5)
+case_034: REJECT slots=6 (>5)
+case_035: sp=1.8541 posthoc=1.7442 GAIN slots=4
+case_036: REJECT slots=6 (>5)
+case_038: REJECT slots=6 (>5)
+case_039: sp=4.5342 posthoc=4.5342 GAIN slots=5
+case_040: REJECT slots=6 (>5)
+case_041: REJECT slots=6 (>5)
+case_042: REJECT slots=6 (>5)
+case_044: sp=1.5339 posthoc=0.9950 GAIN slots=2
+case_045: REJECT slots=6 (>5)
+case_046: sp=2.3577 posthoc=2.0458 GAIN slots=3
+case_049: sp=1.4746 posthoc=1.4598 GAIN slots=4
+case_050: REJECT slots=6 (>5)
+case_051: sp=1.4625 posthoc=1.0000 GAIN slots=4
+case_052: REJECT slots=6 (>5)
+case_053: REJECT slots=6 (>5)
+case_054: REJECT slots=6 (>5)
+case_055: REJECT slots=6 (>5)
+case_057: REJECT slots=6 (>5)
+case_058: REJECT slots=6 (>5)
+case_059: REJECT slots=6 (>5)
+case_060: sp=4.7808 posthoc=4.7808 GAIN slots=5
+case_061: sp=3.3265 posthoc=3.3265 GAIN slots=5
+case_062: REJECT slots=6 (>5)
+case_064: sp=1.1410 posthoc=1.1098 GAIN slots=4
+case_065: REJECT slots=6 (>5)
+case_066: REJECT slots=6 (>5)
+case_067: REJECT slots=6 (>5)
+case_068: REJECT slots=6 (>5)
+case_069: sp=1.9403 posthoc=1.7518 GAIN slots=4
+case_070: REJECT slots=6 (>5)
+case_071: sp=1.6927 posthoc=1.5938 GAIN slots=3
+case_073: REJECT slots=6 (>5)
+case_074: REJECT slots=6 (>5)
+case_075: REJECT slots=6 (>5)
+case_077: REJECT slots=6 (>5)
+case_078: sp=4.5546 posthoc=4.0536 GAIN slots=5
+case_079: REJECT slots=6 (>5)
+case_080: REJECT slots=6 (>5)
+case_081: REJECT slots=6 (>5)
+case_082: REJECT slots=6 (>5)
+case_083: REJECT slots=6 (>5)
+case_084: REJECT slots=6 (>5)
+case_085: REJECT slots=6 (>5)
+case_086: sp=1.1988 posthoc=1.1858 GAIN slots=4
+case_088: sp=1.3340 posthoc=1.3000 GAIN slots=3
+case_092: REJECT slots=6 (>5)
+case_093: REJECT slots=6 (>5)
+case_094: REJECT slots=6 (>5)
+case_095: REJECT slots=6 (>5)
+case_096: sp=3.0312 posthoc=3.0233 GAIN slots=4
+case_097: REJECT slots=6 (>5)
+case_098: REJECT slots=6 (>5)
+case_099: REJECT slots=6 (>5)
+case_100: sp=2.7533 posthoc=2.6356 GAIN slots=3
+== q1 N5: posthoc 3.4608 -> verified 3.5100 (+486.5 粗点) ==
