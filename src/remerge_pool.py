@@ -17,6 +17,8 @@ def best_pulls(q):
                 continue
             if r.get('question') != q or r.get('status') != 'ok':
                 continue
+            if r.get('cores') and r['cores'] > 5:
+                continue  # 防超五核方案混入(审阅意见 P0-B)
             leg = r.get('legality') or {}
             if leg.get('legal') is False:
                 continue
