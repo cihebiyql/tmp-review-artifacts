@@ -1,0 +1,131 @@
+[
+ {
+  "case": "case_049",
+  "mk0": 81432,
+  "best": 81359,
+  "sp0": 2.410305530995186,
+  "sp_new": 2.4124681965117567,
+  "pool_sp": 1.585684,
+  "stats": {
+   "split": [
+    2,
+    45
+   ],
+   "ksplit": [
+    0,
+    27
+   ],
+   "move": [
+    0,
+    16
+   ],
+   "order": [
+    0,
+    0
+   ],
+   "evals": 90,
+   "err": {
+    "scene_b_sim error -2 now=24250.0": 1,
+    "scene_b_sim error -2 now=23332.0": 1,
+    "scene_b_sim error -2 now=76565.0": 3,
+    "scene_b_sim error -2 now=44877.0": 3,
+    "scene_b_sim error -2 now=76754.0": 4,
+    "scene_b_sim error -2 now=24029.0": 4,
+    "scene_b_sim error -2 now=76893.0": 1,
+    "scene_b_sim error -2 now=77569.0": 1,
+    "scene_b_sim error -2 now=76579.0": 1,
+    "scene_b_sim error -2 now=23904.0": 3,
+    "scene_b_sim error -2 now=76753.0": 1,
+    "scene_b_sim error -2 now=76805.0": 1,
+    "scene_b_sim error -2 now=45023.0": 1,
+    "scene_b_sim error -2 now=76581.0": 1
+   }
+  },
+  "n_moves": 90,
+  "official_mk": 81359,
+  "official_match": true,
+  "official_sp": 2.4124681965117567
+ },
+ {
+  "case": "case_044",
+  "mk0": 36640,
+  "best": 36640,
+  "sp0": 4.214164847161572,
+  "sp_new": 4.214164847161572,
+  "pool_sp": 2.701548,
+  "stats": {
+   "split": [
+    0,
+    36
+   ],
+   "ksplit": [
+    0,
+    25
+   ],
+   "move": [
+    0,
+    9
+   ],
+   "order": [
+    0,
+    20
+   ],
+   "evals": 90,
+   "err": {
+    "scene_b_sim error -2 now=36761.0": 2,
+    "scene_b_sim error -2 now=39265.0": 4,
+    "scene_b_sim error -2 now=35044.0": 2,
+    "scene_b_sim error -2 now=36724.0": 5,
+    "scene_b_sim error -2 now=33135.0": 2,
+    "scene_b_sim error -2 now=33787.0": 3,
+    "scene_b_sim error -2 now=32838.0": 1,
+    "scene_b_sim error -2 now=39254.0": 1,
+    "scene_b_sim error -2 now=36757.0": 1
+   }
+  },
+  "n_moves": 90
+ },
+ {
+  "case": "case_066",
+  "mk0": 131856,
+  "best": 129336,
+  "sp0": 2.723198034219148,
+  "sp_new": 2.77625719057339,
+  "pool_sp": 2.669249,
+  "stats": {
+   "split": [
+    1,
+    36
+   ],
+   "ksplit": [
+    2,
+    22
+   ],
+   "move": [
+    0,
+    11
+   ],
+   "order": [
+    1,
+    17
+   ],
+   "evals": 90,
+   "err": {
+    "scene_b_sim error -2 now=88861.0": 1,
+    "scene_b_sim error -2 now=88285.0": 9,
+    "scene_b_sim error -2 now=97673.0": 6,
+    "scene_b_sim error -2 now=88441.0": 3,
+    "scene_b_sim error -2 now=88355.0": 3,
+    "scene_b_sim error -2 now=93172.0": 3,
+    "scene_b_sim error -2 now=88433.0": 4,
+    "scene_b_sim error -2 now=97753.0": 1,
+    "scene_b_sim error -2 now=93174.0": 2,
+    "scene_b_sim error -2 now=78972.0": 1
+   }
+  },
+  "n_moves": 90,
+  "official_mk": 129336,
+  "official_match": true,
+  "official_sp": 2.77625719057339
+ }
+]
