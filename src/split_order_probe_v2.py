@@ -108,6 +108,8 @@ class State:
         self.K = K
         self.n2s = {int(k): v for k, v in plan["node_to_subgraph"].items()}
         self.sched = [list(c) for c in plan["core_schedules"]]
+        if len(self.sched) > K:         # 超过规定槽数,拒绝(审阅 P0:资格优先)
+            raise ValueError(f"plan has {len(self.sched)} slots > K={K}")
         while len(self.sched) < K:      # N4/N2 种子补空槽(B.5 允许)
             self.sched.append([])
         self.sg_core = {}
@@ -214,6 +216,8 @@ def probe(case, q=3, K=5, evals_cap=90, wall_s=130, seed=17, verify=True):
     # ---- 种子:全部存盘方案取 FastEval 最优 ----
     best_seed, mk0 = None, float("inf")
     for fp, pl in seed_plans(case, q, K).items():
+        if len(pl["core_schedules"]) > K:   # 槽位资格优先于分数(审阅 P0)
+            continue
         try:
             mk = fe.evaluate(pl)[0]
         except Exception:
@@ -233,6 +237,7 @@ def probe(case, q=3, K=5, evals_cap=90, wall_s=130, seed=17, verify=True):
              "evals": 0, "err": {}, "dedup": 0, "gen": 0,
              "order_tried": 0, "order_built": 0, "comp_applied": 0}
     log = []
+    stall = 0
     t0 = time.perf_counter()
 
     def evaluate(cand_st):
@@ -333,7 +338,9 @@ def probe(case, q=3, K=5, evals_cap=90, wall_s=130, seed=17, verify=True):
             continue
         stats["gen"] += 1
         # 复合: 结构候选 + 受影响核的顺序联调(中间态不评估)
+        # (P0-3 修复: 交换合法性查询候选自身闭包,新子图 ID 在旧 Rg 中缺失)
         if kind in ("split", "ksplit", "move") and rng.random() < 0.6:
+            Rc = global_reach(ops.sg_edges(cand.n2s))
             for c in range(K):
                 lst = cs.sched[c]
                 if len(lst) < 2:
@@ -341,14 +348,18 @@ def probe(case, q=3, K=5, evals_cap=90, wall_s=130, seed=17, verify=True):
                 for _try in range(3):
                     i = rng.randrange(len(lst) - 1)
                     a, b = lst[i], lst[i + 1]
-                    if b not in Rg.get(a, ()) and a not in Rg.get(b, ()):
+                    if b not in Rc.get(a, ()) and a not in Rc.get(b, ()):
                         lst[i], lst[i + 1] = lst[i + 1], lst[i]
                         stats["comp_applied"] += 1
                         break
         h = plan_hash(cand.emit())
         if h in seen:
             stats["dedup"] += 1
+            stall += 1
+            if stall > 2000:   # 空转保护:真实闭包下邻域枯竭
+                break
             continue
+        stall = 0
         stats["evals"] += 1
         seen.add(h)
         mk = evaluate(cand)
